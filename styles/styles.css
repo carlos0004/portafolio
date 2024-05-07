@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --white: #fff;
+    --gray: #BEBDBD;
+    --dark-gray: #363639;
+    --black: #000;
+    --light-black: #0F0F0F;
+    --green: #06D6A0;
+    --green-2: #3F9073;
+    --green-3: #3F9073;
+    --blue: #0277BD;
+    --purple: #563D7C;
+    --light-pruple: #DBD4F1;
+    --coral: #E69597;
+    --orange: #F5955F;
+    --yellow: #FFD166;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color-scheme: var(--light-black);
+    font-family: "Inter", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+body {
+    background-color: var(--light-black);
+    color: var(--white);
+}
+
+header {
+    width: 100%;
+    font-size: 20px;
+    position: relative;
+}
+
+header nav {
+    top: 0;
+    position: sticky;
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    background-color: var(--light-black);
+}
+
+nav .side {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.links a {
+    height: 35px;
+    width: 35px;
+    background-size: cover;
+}
+
+.links .github {
+    background-image: url(../img/github.svg);
+}
+
+.links .linkedin {
+    background-image: url(../img/linkedin.svg);
+}
+
+section {
+    padding: 1rem;
+}
+
+header section {
+    margin-top: 12rem;
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.experiencia {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.experiencia .side h1 {
+    color: var(--green-2);
+}
+
+.experiencia .side {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.side .side-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.side-list .e-item {
+    display: flex;
+    flex-direction: column;
+    border-left: 3px solid var(--dark-gray);
+    padding-left: 2rem;
+    padding-bottom: 5rem;
+    gap: 5px;
+    position: relative;
+}
+
+.side-list .e-item:last-child {
+    padding-bottom: 2rem;
+}
+
+.e-item .circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: var(--green-2);
+    border-radius: 50%;
+    margin-top: 1rem;
+    transform: translateX(-55%);
+}
+
+.e-item .org {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.e-item .position {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.e-item .years {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--gray);
+}
+
+section .me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.me .greeting {
+    font-size: 32px;
+    white-space: nowrap;
+}
+
+.me .name {
+    white-space: nowrap;
+    font-size: 64px;
+    border-bottom: 4px solid var(--green-2);
+}
+
+.me .description {
+    font-size: 36px;
+    white-space: nowrap;
+}
+
+section .photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & img {
+        border-radius: 25%;
+    }
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+main section {
+    max-width: 1500px;
+    margin: 6rem auto;
+    width: 100%;
+}
+
+
+.technologies .t-1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    row-gap: 4rem;
+}
+
+.technologies .t-2 {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    row-gap: 4rem;
+}
+
+
+.projects {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.project {
+    width: 100%;
+    border: 3px solid var(--white);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    gap: 1rem;
+}
+
+.project .technologies {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+}
+
+.item {
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 100px;
+    font-weight: bold;
+}
+
+.html {
+    border: 3px solid var(--orange);
+    color: var(--orange);
+}
+
+.css {
+    border: 3px solid var(--blue);
+    color: var(--blue);
+}
+
+.bootstrap {
+    border: 3px solid var(--purple);
+    color: var(--purple);
+}
+
+.jquery {
+    border: 3px solid var(--green);
+    color: var(--green);
+}
+
+.ajax {
+    border: 3px solid var(--yellow);
+    color: var(--yellow);
+}
+
+.php {
+    border: 3px solid var(--light-pruple);
+    color: var(--light-pruple);
+}
+
+.mysql {
+    border: 3px solid var(--coral);
+    color: var(--coral);
+}
+
+.project .description {
+    color: var(--gray);
+}
+
+footer {
+    display: flex;
+    margin-top: 7rem;
+    justify-content: space-around;
+    height: 15rem;
+    text-transform: uppercase;
+    position: relative;
+}
+
+footer aside {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+aside .list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.list a {
+    color: var(--gray);
+}
+
+.copy {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 1rem;
+    font-size: 12px;
+}
+
+.technology {
+    width: 60px;
+}
+
+@media (max-width:768px) {
+    h1 {
+        font-size: 48px;
+        margin-bottom: 2rem;
+    }
+
+    header section {
+        margin-top: 4rem;
+        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .me .greeting {
+        font-size: 24px;
+    }
+
+    .me .name {
+        font-size: 45px;
+    }
+
+    .me .description {
+        font-size: 22px;
+    }
+
+    main section {
+        margin: 3rem auto;
+    }
+
+    .experiencia {
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    .technology {
+        width: 40px;
+    }
+
+    .projects {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .item {
+        height: 30px;
+        font-size: 12px;
+        border-width: 1px;
+        font-weight: 600;
+    }
+}
+
+@media (max-width:600px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    .me .greeting {
+        font-size: 20px;
+    }
+
+    .me .name {
+        font-size: 30px;
+    }
+
+    .me .description {
+        font-size: 18px;
+    }
+
+    .e-item .org {
+        font-size: 24px;
+    }
+
+    .e-item .position {
+        font-size: 15px;
+    }
+
+    .e-item .years {
+        font-size: 14px;
+
+    }
+}
+
+@media (max-width:400px) {
+    .me .greeting {
+        font-size: 16px;
+    }
+
+    .me .name {
+        font-size: 24px;
+    }
+
+    .me .description {
+        font-size: 14px;
+    }
+}
