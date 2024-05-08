@@ -33,14 +33,15 @@ const $abrirCerrarMenu = document.querySelector(".abrir-cerrar");
 const $headerNav = document.querySelector("header nav");
 const $links = document.querySelectorAll("nav a");
 
-$abrirCerrarMenu.getElementsByTagName("input")[0].addEventListener("click", () => {
+$abrirCerrarMenu.getElementsByTagName("input")[0].addEventListener("click", (e) => {
 
+    document.body.style.overflow = "hidden";
     $headerNav.classList.toggle("active");
 
     $links.forEach(link => {
         link.addEventListener("click", () => {
+            document.body.style.overflow = "auto";
             $headerNav.classList.remove("active");
         })
     })
-
 });
