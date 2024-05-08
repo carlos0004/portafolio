@@ -62,6 +62,52 @@ header nav {
     background-color: var(--light-black);
 }
 
+.abrir-cerrar {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1rem 2rem 0 0;
+    display: none;
+    z-index: 2;
+}
+
+.abrir-cerrar input {
+    display: none;
+}
+
+.abrir-cerrar svg {
+    /* The size of the SVG defines the overall size */
+    height: 2em;
+    /* Define the transition for transforming the SVG */
+    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line {
+    fill: none;
+    stroke: white;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3;
+    /* Define the transition for transforming the Stroke */
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+        stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line-top-bottom {
+    stroke-dasharray: 12 63;
+}
+
+.abrir-cerrar input:checked+svg {
+    transform: rotate(-45deg);
+}
+
+.abrir-cerrar input:checked+svg .line-top-bottom {
+    stroke-dasharray: 20 300;
+    stroke-dashoffset: -32.42;
+}
+
+
 nav .side {
     height: 100%;
     display: flex;
@@ -347,10 +393,6 @@ aside .list {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .menu {
-        display: flex;
-        flex-direction: column;
-    }
 
     .me .greeting {
         font-size: 24px;
@@ -388,7 +430,51 @@ aside .list {
         border-width: 1px;
         font-weight: 600;
     }
+
+    .abrir-cerrar {
+        display: block;
+    }
+
+    header nav {
+        height: 0;
+        overflow: hidden;
+        flex-direction: column;
+    }
+    
+    .active {
+        height: 100dvh;
+        padding-top: 30%;
+        gap: 10%;
+        position: fixed;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu a {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        width: 100%;
+        position: relative;
+    }
+
+    .menu a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-image: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 49%, rgba(0, 0, 0, 1) 100%);
+    }
+
+    .links {
+        align-items: start !important;
+    }
 }
+
 
 @media (max-width:600px) {
     h1 {
