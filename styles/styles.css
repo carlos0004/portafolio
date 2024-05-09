@@ -340,6 +340,7 @@ main section {
 }
 
 .project .description {
+    text-align: justify;
     color: var(--gray);
 }
 
