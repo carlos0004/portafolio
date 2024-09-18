@@ -233,6 +233,7 @@ section .photo {
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 25rem;
 
     & img {
         border-radius: 25%;
